@@ -14,3 +14,6 @@ include vendor/xiaomitaoyao/BoardConfigVendor.mk
 
 # Board
 TARGET_BOOTLOADER_BOARD_NAME := taoyao
+
+# Kernel
+TARGET_KERNEL_CONFIG := vendor/taoyao-qgki_defconfig
