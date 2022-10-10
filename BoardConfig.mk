@@ -21,3 +21,6 @@ TARGET_KERNEL_CONFIG := vendor/taoyao-qgki_defconfig
 # Partitions
 BOARD_DTBOIMG_PARTITION_SIZE := 25165824
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 113254576128
+
+# Vibrator
+SOONG_CONFIG_xiaomiSm8350Vars_vibrator_use_effect_stream := true
