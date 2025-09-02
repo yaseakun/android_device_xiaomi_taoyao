@@ -11,5 +11,9 @@ $(call inherit-product, device/xiaomi/sm8350-common/common.mk)
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay
+
 # Call the proprietary setup
 $(call inherit-product, vendor/xiaomi/taoyao/taoyao-vendor.mk)
