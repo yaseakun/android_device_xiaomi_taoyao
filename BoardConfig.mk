@@ -10,7 +10,7 @@ DEVICE_PATH := device/xiaomi/taoyao
 include device/xiaomi/sm8350-common/BoardConfigCommon.mk
 
 # Include proprietary files
-include vendor/xiaomitaoyao/BoardConfigVendor.mk
+include vendor/xiaomi/taoyao/BoardConfigVendor.mk
 
 # Board
 TARGET_BOOTLOADER_BOARD_NAME := taoyao
