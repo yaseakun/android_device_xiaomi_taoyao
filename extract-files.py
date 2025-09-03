@@ -30,13 +30,6 @@ lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
 }
 
-lib_fixups: lib_fixups_user_type = {
-    **lib_fixups,
-    (
-      'vendor.xiaomi.hardware.campostproc@1.0',
-    ): lib_fixup_vendor_suffix,
-}
-
 blob_fixups: blob_fixups_user_type = {
     ('vendor/etc/camera/pureShot_parameter.xml', 'vendor/etc/camera/pureView_parameter.xml'): blob_fixup()
         .regex_replace(r'=(\d+)>', r'="\1">'),
