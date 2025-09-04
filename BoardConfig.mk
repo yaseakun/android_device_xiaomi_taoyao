@@ -15,6 +15,10 @@ include vendor/xiaomi/taoyao/BoardConfigVendor.mk
 # Board
 TARGET_BOOTLOADER_BOARD_NAME := taoyao
 
+# HIDL
+DEVICE_MANIFEST_FILE := \
+    $(DEVICE_PATH)/hidl/manifest_taoyao.xml
+
 # Kernel Modules
 TARGET_KERNEL_SOURCE := device/xiaomi/taoyao-kernel/kernel-headers
 BOARD_KERNEL_MODULE_DIRS := 5.4-gki
