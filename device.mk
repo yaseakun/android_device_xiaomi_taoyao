@@ -11,6 +11,14 @@ $(call inherit-product, device/xiaomi/sm8350-common/common.mk)
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Fingerprint
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.vendor.fingerprint.type=udfps_optical \
+    persist.vendor.fingerprint.sensor_location=540|2149|103
+
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.vendor.sensors.xiaomi.udfps=true
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
