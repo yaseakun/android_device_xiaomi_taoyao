@@ -19,8 +19,13 @@ TARGET_BOOTLOADER_BOARD_NAME := taoyao
 DEVICE_MANIFEST_FILE := \
     $(DEVICE_PATH)/hidl/manifest_taoyao.xml
 
-# Kernel Modules
+# Workaround to make lineage's soong generator work
+TARGET_KERNEL_ARCH := arm64
+TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := device/xiaomi/taoyao-kernel/kernel-headers
+TARGET_KERNEL_VERSION := 5.4
+
+# Kernel Modules
 BOARD_KERNEL_MODULE_DIRS := 5.4-gki
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES := \
     $(DEVICE_PATH)-kernel/modules/focaltech_touch.ko \
@@ -37,6 +42,8 @@ TARGET_NO_KERNEL_OVERRIDE := true
 BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)-kernel/dtb
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img
 
+TARGET_FORCE_PREBUILT_KERNEL := true
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)-kernel/kernel
 PRODUCT_COPY_FILES += \
 	$(DEVICE_PATH)-kernel/kernel:kernel
 
